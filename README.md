@@ -1,2 +1,35 @@
 # hello-world
 这是我的第一个代码仓库
+#include<stdio.h>
+int main()
+{
+	int year,month,days;
+	scanf("%d %d",&year,&month);
+	if((month>=1&&month<=12)&&(year>=1900&&year<=9999)){
+		if(month!=2){
+			switch(month){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+				printf("year = %d month = %d days=31",year,month); 
+				break;
+				default:
+					printf("year = %d month = %d days=30",year,month);
+					break;
+			} 
+		}
+		else{
+			if((year%4==0&&year%100!=0)||(year%400==0)){
+				printf("year = %d month = %d days=29",year,month);
+			}
+			else{
+				printf("year = %d month = %d days=28",year,month);
+			}
+		}
+	}
+	return 0; 
+ }
