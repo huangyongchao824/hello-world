@@ -1,1 +1,14 @@
-
+#include<stdio.h>
+int main(){
+int n;
+long long sum=1,count=0;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++){
+		sum*=i; 
+		if(i%2==1){
+		count+=sum;	
+	}
+	}
+	printf("%lld",count); 
+return 0;
+}
